@@ -1,0 +1,51 @@
+[main]
+label_wuhz:{"name":"quickreply","type":"quick_reply","alias":"नमस्ते। क्या आप जानना चाहेंगे कि आपका बच्चा कुपोषित है या नहीं?🙏🤗","msgid":"09aef5fd-d333-337b-f225-4ff799ab2481","content":{"type":"text","text":"नमस्ते। क्या आप जानना चाहेंगे कि आपका बच्चा कुपोषित है या नहीं?🙏🤗"},"options":[{"type":"text","title":"हाँ","iconurl":"","id":"06b2168d-41e7-95aa-8894-c75e1e18d3a3","isDuplicate":false,"name":"user"},{"type":"text","title":"ना","iconurl":"","id":"03b5b19d-0a6f-e953-3c90-b86c4872c39a","isDuplicate":false,"name":"user"}]}
+	label_rioq:हाँ
+		label_rdeu:{"name":"quickreply","type":"quick_reply","alias":"आप कैसे मापना चाहेंगे, मुआक टेप के द्वारा या ऊंचाई और वजन के द्वारा?","msgid":"d7e4e931-2135-c5fd-9053-fc829f8a7734","content":{"type":"text","text":"आप कैसे मापना चाहेंगे, मुआक टेप के द्वारा या ऊंचाई और वजन के द्वारा?"},"options":[{"type":"text","title":"📏मुआक टेप","iconurl":"","id":"d3bea63a-02e8-4f25-e67d-3722e666bdba","isDuplicate":false,"name":"user"},{"type":"text","title":"ऊंचाई और वजन","iconurl":"","id":"01d88cd1-f5cc-d19f-d2b3-4b70540fc175","isDuplicate":false,"name":"user"}]}
+			label_nzyq:📏मुआक टेप
+				label_vmtx:{"name":"quickreply","type":"quick_reply","alias":"कृपया बताइए, आपके बच्चे के मुआक माप के टेप पर कौन सा रंग है?","msgid":"4122918b-7119-94cb-862a-fce9bb19371d","content":{"type":"text","text":"कृपया बताइए, आपके बच्चे के मुआक माप के टेप पर कौन सा रंग है?"},"options":[{"type":"text","title":"🙁लाल","iconurl":"","id":"6a3ee301-22a1-f2f1-e5f1-1e02e0fa8210","isDuplicate":false,"name":"user"},{"type":"text","title":"😐पीला","iconurl":"","id":"f21382c7-829a-8840-ccb5-4aa233fd958f","isDuplicate":false,"name":"user"},{"type":"text","title":"😍हरा","iconurl":"","id":"16e428cc-ff80-c4f3-fad5-739d92a05b82","isDuplicate":false,"name":"user"}]}
+					label_aprx:🙁लाल
+						label_tymz:{"name":"quickreply","type":"quick_reply","alias":"कृपया तुरंत आंगनवाड़ी केंद्र पर जाएं। आपका बच्चा कुपोषित है। क्या आपने आंगनवाड़ी केंद्र में पंजीकरण करवाया है?","msgid":"eed105a6-eda7-1ccb-2358-c240a20de762","content":{"type":"text","text":"\"कृपया तुरंत आंगनवाड़ी केंद्र पर जाएं। आपका बच्चा कुपोषित है। क्या आपने आंगनवाड़ी केंद्र में पंजीकरण करवाया है?"},"options":[{"type":"text","title":"हाँ","iconurl":"","id":"98a1b50b-3683-9c82-7034-1f90198c67f1","isDuplicate":false,"name":"user"},{"type":"text","title":"ना","iconurl":"","id":"bc170402-f9d6-c908-53fa-4914b5c98e9e","isDuplicate":false,"name":"user"}]}
+							label_zsxm:हाँ
+								label_mchd:अधिक जानकारी के लिए www.malnutrition.ai पर जाएं
+							label_fsps:ना
+								label_red_no:अधिक जानकारी के लिए www.malnutrition.ai पर जाएं
+							label_red_wp_yes:1:goto label_zsxm
+							label_red_wp_no:2:goto label_fsps
+					label_gjbz:😐पीला:goto label_aprx
+					label_pmli:😍हरा
+						label_green:आपका बच्चा कुपोषित नहीं है। अधिक जानकारी के लिए www.malnutrition.ai पर जाएं
+					label_red:1:goto label_aprx
+					label_yellow:2:goto label_gjbz
+					label_wp_green:3:goto label_pmli
+			label_usje:ऊंचाई और वजन
+				label_imdv:{"name":"quickreply","type":"quick_reply","alias":"लिंग","msgid":"38bc7bb6-a18f-d5c7-8ef0-5a190eff2c99","content":{"type":"text","text":"लिंग"},"options":[{"type":"text","title":"महिला","iconurl":"","id":"c5a35fb5-7aa5-5bcd-116d-86d521a31a36","isDuplicate":false,"name":"user"},{"type":"text","title":"पुरुष","iconurl":"","id":"c19bbeec-454b-f0d3-b0cb-47deaa481edc","isDuplicate":false,"name":"user"}]}
+					label_ask_sex:महिला
+						label_ztbv:उम्र महीनों में
+							label_age:10|30|70|130|170|270|350|470|550|670|910|1130|1250
+								label_ask_height:ऊंचाई सेंटीमीटर में
+									label_height:10|40|70.6|88.5|100.5|130|150.8|170|220|239.6|270|350.3|370
+										label_ask_weight:वजन किलोग्राम में
+											label_weight:10|20.4|30|57.2|60|89.5|100|107.3|120.3|150|167.7|200|250.6|350
+												label_zscore:{{zscore_msg}}
+												label_score_result:{{result}}
+											weight_exe::onException
+											    :goto label_height
+									height_exe::onException
+									    :goto label_age
+							age_exe::onException
+							    :goto label_ask_sex
+					label_gnhq:पुरुष:goto label_ask_sex
+					label_wp_f:1:goto label_ask_sex
+					label_wp_m:2:goto label_ask_sex
+			label_tap:1:goto label_nzyq
+			label_height_weight:2:goto label_usje
+	label_lxdx:ना
+		label_ehif:कृपया उनकी सही देखभाल के लिए संबंधित सलाह लें और अपने बच्चे के स्वास्थ्य को सुनिश्चित करने के लिए समय-समय पर चिकित्सा जांच कराएं
+	label_yes:1:goto label_rioq
+	label_no:2:goto label_lxdx
+	blank::onException
+		default_30:कृपया दुबारा प्रयास करें
+[common]
+label_vjir:hi|Hi,Hello,hello
+	label_psyw::call default.main
