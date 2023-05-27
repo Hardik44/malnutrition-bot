@@ -1,4 +1,4 @@
-# growup API
+# Malnutrition bot
 
 Setup:
 ```commandline
@@ -29,3 +29,10 @@ API doc:
 ```commandline
 http://127.0.0.1:8000/docs#/default/calculate_zscore_calculate_zscore_get
 ```
+
+Host fastAPI endpoint on deta.space:
+https://deta.space/
+
+- Create Gupshup bot and add `default.js` and `default.scr` files to build bot
+- Update endpoint url into `botdata.json`
+- Test bot on sandbox
